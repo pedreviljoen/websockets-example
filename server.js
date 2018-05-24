@@ -15,6 +15,7 @@ wss.on('connection', (ws) => {
   // add a simple event
   ws.on('message', (message) => {
     if(message == 'bye'){
+      
       ws.send('You can not say bye, this is a websocket')
     } else {
       ws.send('Hello, you have sent ' + message)
